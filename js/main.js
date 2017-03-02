@@ -1,23 +1,17 @@
-/*
-* @Author: ruochen
-* @Date:   2017-02-23 22:00:16
-* @Last Modified by:   ruochen
-* @Last Modified time: 2017-02-24 11:50:47
-*/
 
 'use strict';
 var runPage;
             runPage = new FullPage({
-                id:'pageContain',
-                slideTime:800,
-                continuous:false,
+                id:'pageContain',  //外层包裹id
+                slideTime:800,      //每页切换时间
+                continuous:true,    //是否循环页面
                 effect:{
                 transform:{
-                    translate:'Y',
+                    translate:'XY',  
                     scale:[.1, 1],
                     rotate:[0, 0]
                 },
-                opacity:[0, 1]
+                opacity:[0, 1]   //透明度
                 },
                 mode:'wheel,touch,nav:navBar',
             start:0,
@@ -39,4 +33,11 @@ var runPage;
             $("#model1").click(function(){
             $("#model1").hide();
             });
+            });
+           
+            $('#weixin-image').mouseenter(function(){
+                 $('#erweima').show();
+            });
+             $('#weixin-image').mouseout(function(){
+                 $('#erweima').hide();
             });
